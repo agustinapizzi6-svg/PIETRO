@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Pietro ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #fff5f7;
+            color: #5a2635;
+            text-align: center;
+        }
+
+        .portada {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #fff0f4, #ffd9e2);
+        }
+
+        .corazon {
+            font-size: 70px;
+            animation: latido 1.5s infinite;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .subtitulo {
+            font-size: 20px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .boton {
+            margin-top: 25px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #b94b6b;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 70px 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(120, 50, 70, 0.12);
+            max-width: 700px;
+            line-height: 1.7;
+        }
+
+        .razones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .razon {
+            background: #ffe6ec;
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        footer {
+            padding: 50px 20px;
+            background: #5a2635;
+            color: white;
+        }
+
+        @keyframes latido {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="portada">
+        <div class="corazon">❤️</div>
+
+        <h1>Para Pietro</h1>
+
+        <p class="subtitulo">
+            Una pequeña parte de todo lo que siento por vos,
+            convertida en un lugar para guardar nuestros recuerdos.
+        </p>
+
+        <button class="boton" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+            Empezar nuestra historia 💌
+        </button>
+    </div>
+
+
+    <section id="historia">
+
+        <h2>Nuestra historia 💗</h2>
+
+        <div class="tarjeta">
+            <h3>De mejores amigos a nosotros</h3>
+
+            <p>
+                Todo empezó siendo amigos, sin saber todo lo que
+                iba a terminar significando nuestra historia.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>El viaje que cambió todo ✈️</h3>
+
+            <p>
+                Durante julio empezamos a hablar muchísimo más
+                y poco a poco me fui dando cuenta de lo importante
+                que te estabas volviendo para mí.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Nuestra primera cita 🎬</h3>
+
+            <p>
+                Nuestra primera cita fue al cine a ver Zootopia 2.
+                Y aunque parecía un día cualquiera, terminó siendo
+                uno de esos recuerdos que quiero guardar para siempre.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>El momento en el que empezó todo ❤️</h3>
+
+            <p>
+                Y después llegó ese momento en las hamacas del hotel,
+                cuando nuestra historia dejó de ser solamente una
+                amistad y empezó a convertirse en algo mucho más lindo.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>Algunas cosas que amo de vos 🥹</h2>
+
+        <div class="razones">
+
+            <div class="razon">
+                Tu forma de cuidarme ❤️
+            </div>
+
+            <div class="razon">
+                Lo paciente que sos conmigo.
+            </div>
+
+            <div class="razon">
+                Que siempre intentás que estemos bien.
+            </div>
+
+            <div class="razon">
+                Tu sentido del humor.
+            </div>
+
+            <div class="razon">
+                La forma en la que me escuchás.
+            </div>
+
+            <div class="razon">
+                Que admitís cuando te equivocás.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>Una carta para vos 💌</h2>
+
+        <div class="tarjeta">
+
+            <p>
+                Pietro:
+            </p>
+
+            <p>
+                No sé si existe una forma suficiente de explicar
+                todo lo que significás para mí, pero quería intentar
+                guardar aunque sea una pequeña parte de nuestra historia
+                en este lugar.
+            </p>
+
+            <p>
+                Gracias por cada momento, cada risa, cada abrazo,
+                cada conversación y por todas esas pequeñas cosas
+                que quizás parecen insignificantes pero que para mí
+                significan muchísimo.
+            </p>
+
+            <p>
+                Te amo muchísimo, café con leche. 🤎
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h2>Y esto recién empieza... ❤️</h2>
+
+        <p>
+            Te elegiría una y otra vez.
+        </p>
+
+    </footer>
+
+</body>
+</html>
