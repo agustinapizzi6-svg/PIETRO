@@ -1,251 +1,1135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Pietro ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<title>Para Pietro 🤎</title>
 
-        body {
-            margin: 0;
-            font-family: Georgia, serif;
-            background: #fff5f7;
-            color: #5a2635;
-            text-align: center;
-        }
+<style>
 
-        .portada {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #fff0f4, #ffd9e2);
-        }
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        .corazon {
-            font-size: 70px;
-            animation: latido 1.5s infinite;
-        }
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff7f9;
+    color: #542532;
+}
 
-        h1 {
-            font-size: 48px;
-            margin: 15px 0;
-        }
+/* ---------------- PORTADA ---------------- */
 
-        .subtitulo {
-            font-size: 20px;
-            max-width: 600px;
-            line-height: 1.6;
-        }
+.portada {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background:
+        radial-gradient(circle at top left, #ffffff 0%, transparent 30%),
+        linear-gradient(135deg, #fff0f4, #f8cbd7);
+    position: relative;
+    overflow: hidden;
+}
 
-        .boton {
-            margin-top: 25px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            background: #b94b6b;
-            color: white;
-            font-size: 17px;
-            cursor: pointer;
-        }
+.portada h1 {
+    font-size: clamp(45px, 12vw, 90px);
+    margin: 10px 0;
+    color: #7b3047;
+}
 
-        section {
-            padding: 70px 25px;
-            max-width: 900px;
-            margin: auto;
-        }
+.portada p {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.7;
+}
 
-        h2 {
-            font-size: 32px;
-            margin-bottom: 25px;
-        }
+.corazon-grande {
+    font-size: 80px;
+    animation: latido 1.5s infinite;
+}
 
-        .tarjeta {
-            background: white;
-            padding: 25px;
-            margin: 20px auto;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(120, 50, 70, 0.12);
-            max-width: 700px;
-            line-height: 1.7;
-        }
+.boton {
+    border: none;
+    background: #7b3047;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 40px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .3s;
+}
 
-        .razones {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
+.boton:hover {
+    transform: scale(1.06);
+}
 
-        .razon {
-            background: #ffe6ec;
-            padding: 20px;
-            border-radius: 18px;
-        }
+/* ---------------- SECCIONES ---------------- */
 
-        footer {
-            padding: 50px 20px;
-            background: #5a2635;
-            color: white;
-        }
+section {
+    padding: 80px 22px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        @keyframes latido {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.15);
-            }
-        }
-    </style>
+.titulo {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #7b3047;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #855261;
+}
+
+/* ---------------- MÚSICA ---------------- */
+
+.musica {
+    background: #6d293e;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.musica h2 {
+    margin-top: 0;
+}
+
+.reproductor {
+    max-width: 500px;
+    margin: auto;
+}
+
+audio {
+    width: 100%;
+}
+
+/* ---------------- TARJETAS ---------------- */
+
+.tarjeta {
+    background: white;
+    border-radius: 25px;
+    padding: 28px;
+    margin: 20px auto;
+    box-shadow: 0 8px 25px rgba(100,40,60,.10);
+    line-height: 1.8;
+}
+
+/* ---------------- FOTOS ---------------- */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.foto {
+    height: 280px;
+    border-radius: 22px;
+    background: #f2d5dd;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #855261;
+    text-align: center;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------- TIMELINE ---------------- */
+
+.timeline {
+    position: relative;
+    max-width: 750px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: #d98da2;
+}
+
+.evento {
+    width: 50%;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.evento:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.evento:nth-child(even) {
+    left: 50%;
+}
+
+.evento-contenido {
+    background: white;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(80,30,50,.10);
+}
+
+.evento h3 {
+    color: #8a3650;
+}
+
+/* ---------------- RAZONES ---------------- */
+
+.contador {
+    text-align: center;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.razones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.razon {
+    background: #ffe3eb;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------- ABRÍ CUANDO ---------------- */
+
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.carta-boton {
+    border: none;
+    padding: 25px;
+    border-radius: 22px;
+    background: #f5d0da;
+    color: #632c3d;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carta-boton:hover {
+    transform: translateY(-5px);
+}
+
+.carta-contenido {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+/* ---------------- JUEGO ---------------- */
+
+.juego {
+    text-align: center;
+}
+
+.pregunta {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(80,30,50,.10);
+    max-width: 650px;
+    margin: auto;
+}
+
+.opcion {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 15px;
+    background: #f7dce4;
+    color: #5d2939;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.opcion:hover {
+    background: #efbdcb;
+}
+
+/* ---------------- MAPA ---------------- */
+
+.mapa {
+    max-width: 700px;
+    margin: auto;
+}
+
+.paso {
+    background: white;
+    margin: 15px;
+    padding: 22px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(80,30,50,.08);
+}
+
+/* ---------------- CARTA FINAL ---------------- */
+
+.carta-final {
+    background: linear-gradient(135deg, #fff0f4, #f5ccd7);
+    border-radius: 30px;
+    padding: 40px;
+    line-height: 2;
+    font-size: 18px;
+    box-shadow: 0 10px 30px rgba(80,30,50,.12);
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    background: #542532;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+footer h2 {
+    font-size: 32px;
+}
+
+/* ---------------- CORAZONES ---------------- */
+
+.corazon-flotante {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    pointer-events: none;
+    animation: subir 6s linear forwards;
+    z-index: 1000;
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes latido {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+/* ---------------- CELULAR ---------------- */
+
+@media(max-width:700px) {
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .evento,
+    .evento:nth-child(even),
+    .evento:nth-child(odd) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 35px;
+    }
+
+    .portada p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 60px 18px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <div class="portada">
-        <div class="corazon">❤️</div>
 
-        <h1>Para Pietro</h1>
+<!-- ================= PORTADA ================= -->
 
-        <p class="subtitulo">
-            Una pequeña parte de todo lo que siento por vos,
-            convertida en un lugar para guardar nuestros recuerdos.
-        </p>
+<div class="portada">
 
-        <button class="boton" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
-            Empezar nuestra historia 💌
-        </button>
+    <div class="corazon-grande">🤎</div>
+
+    <h1>Para Pietro</h1>
+
+    <p>
+        Un pequeño lugar hecho para guardar
+        algunos de nuestros recuerdos,
+        algunas de las razones por las que te amo
+        y una parte de nuestra historia.
+    </p>
+
+    <button class="boton"
+    onclick="document.getElementById('historia').scrollIntoView()">
+
+        Abrir nuestro mundo 💌
+
+    </button>
+
+</div>
+
+
+<!-- ================= MÚSICA ================= -->
+
+<div class="musica">
+
+    <h2>🎵 Una canción para nosotros</h2>
+
+    <p>
+        Poné play y recorré nuestra historia.
+    </p>
+
+    <div class="reproductor">
+
+        <!--
+        IMPORTANTE:
+        Subí una canción llamada "musica.mp3"
+        al mismo repositorio y va a aparecer acá.
+        -->
+
+        <audio controls>
+
+            <source src="musica.mp3" type="audio/mpeg">
+
+            Tu navegador no puede reproducir este audio.
+
+        </audio>
+
+    </div>
+
+</div>
+
+
+<!-- ================= HISTORIA ================= -->
+
+<section id="historia">
+
+    <h2 class="titulo">Nuestra historia 🤎</h2>
+
+    <p class="subtitulo">
+        Algunas de las cosas que nos trajeron hasta acá.
+    </p>
+
+
+    <div class="timeline">
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>👫 Mejores amigos</h3>
+
+                <p>
+                    Todo empezó siendo amigos.
+                    Sin saber que esa amistad iba a terminar
+                    convirtiéndose en una de las partes más
+                    importantes de nuestras vidas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>🚌 Misiones</h3>
+
+                <p>
+                    Ese viaje, las conversaciones,
+                    las risas y todos esos pequeños momentos
+                    que hicieron que nos acercáramos cada vez más.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>💐 El bouquet</h3>
+
+                <p>
+                    Otro de esos momentos que quizás en el momento
+                    no sabíamos cuánto iban a significar después.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>💋 Nuestro primer beso</h3>
+
+                <p>
+                    Stranger Things, tu casa y un momento
+                    que quedó guardado para siempre.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>🎬 Nuestra primera cita</h3>
+
+                <p>
+                    Zootopia 2.
+                    Nuestra primera salida como algo más
+                    que amigos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>🌿 Las hamacas</h3>
+
+                <p>
+                    Ese momento en el hotel donde nuestra historia
+                    empezó oficialmente.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="evento">
+
+            <div class="evento-contenido">
+
+                <h3>❤️ Nosotros</h3>
+
+                <p>
+                    Y después de todo eso,
+                    acá estamos.
+                    Escribiendo nuestra historia todos los días.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALERÍA ================= -->
+
+<section>
+
+    <h2 class="titulo">Nuestros recuerdos 📸</h2>
+
+    <p class="subtitulo">
+        Acá después podemos poner nuestras fotos favoritas.
+    </p>
+
+
+    <div class="galeria">
+
+
+        <div class="foto">
+
+            <div>
+
+                <strong>📸 Foto 1</strong>
+
+                <p>
+                    Subí tu foto y reemplazá este espacio.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto">
+
+            <div>
+
+                <strong>📸 Foto 2</strong>
+
+                <p>
+                    Nuestro recuerdo favorito.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto">
+
+            <div>
+
+                <strong>📸 Foto 3</strong>
+
+                <p>
+                    Otro momento nuestro.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto">
+
+            <div>
+
+                <strong>📸 Foto 4</strong>
+
+                <p>
+                    Una foto que siempre me hace sonreír.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= RAZONES ================= -->
+
+<section>
+
+    <h2 class="titulo">200 razones para amarte 💗</h2>
+
+    <p class="subtitulo">
+        Algunas de las 200 razones que tengo para elegirte.
+    </p>
+
+    <div class="contador">
+
+        Razón <span id="numeroRazon">1</span> de 200
+
     </div>
 
 
-    <section id="historia">
+    <div class="razones">
 
-        <h2>Nuestra historia 💗</h2>
+        <div class="razon" id="razonTexto">
 
-        <div class="tarjeta">
-            <h3>De mejores amigos a nosotros</h3>
+            Tu forma de cuidarme ❤️
 
-            <p>
-                Todo empezó siendo amigos, sin saber todo lo que
-                iba a terminar significando nuestra historia.
-            </p>
         </div>
 
-        <div class="tarjeta">
-            <h3>El viaje que cambió todo ✈️</h3>
-
-            <p>
-                Durante julio empezamos a hablar muchísimo más
-                y poco a poco me fui dando cuenta de lo importante
-                que te estabas volviendo para mí.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <h3>Nuestra primera cita 🎬</h3>
-
-            <p>
-                Nuestra primera cita fue al cine a ver Zootopia 2.
-                Y aunque parecía un día cualquiera, terminó siendo
-                uno de esos recuerdos que quiero guardar para siempre.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <h3>El momento en el que empezó todo ❤️</h3>
-
-            <p>
-                Y después llegó ese momento en las hamacas del hotel,
-                cuando nuestra historia dejó de ser solamente una
-                amistad y empezó a convertirse en algo mucho más lindo.
-            </p>
-        </div>
-
-    </section>
+    </div>
 
 
-    <section>
+    <div style="text-align:center;">
 
-        <h2>Algunas cosas que amo de vos 🥹</h2>
+        <button class="boton" onclick="siguienteRazon()">
 
-        <div class="razones">
+            Otra razón 💕
 
-            <div class="razon">
-                Tu forma de cuidarme ❤️
-            </div>
+        </button>
 
-            <div class="razon">
-                Lo paciente que sos conmigo.
-            </div>
+    </div>
 
-            <div class="razon">
-                Que siempre intentás que estemos bien.
-            </div>
+</section>
 
-            <div class="razon">
-                Tu sentido del humor.
-            </div>
 
-            <div class="razon">
-                La forma en la que me escuchás.
-            </div>
+<!-- ================= ABRÍ CUANDO ================= -->
 
-            <div class="razon">
-                Que admitís cuando te equivocás.
+<section>
+
+    <h2 class="titulo">Abrí cuando... 💌</h2>
+
+    <p class="subtitulo">
+        Cartitas para diferentes momentos.
+    </p>
+
+
+    <div class="cartas">
+
+
+        <div>
+
+            <button class="carta-boton"
+            onclick="abrirCarta('triste')">
+
+                😔 Abrí cuando estés triste
+
+            </button>
+
+            <div class="carta-contenido" id="triste">
+
+                Aunque estés teniendo un día horrible,
+                quiero que recuerdes que no estás solo.
+                Estoy orgullosa de vos y te quiero muchísimo. 🤎
+
             </div>
 
         </div>
 
-    </section>
 
+        <div>
 
-    <section>
+            <button class="carta-boton"
+            onclick="abrirCarta('extrano')">
 
-        <h2>Una carta para vos 💌</h2>
+                🥺 Abrí cuando me extrañes
 
-        <div class="tarjeta">
+            </button>
 
-            <p>
-                Pietro:
-            </p>
+            <div class="carta-contenido" id="extrano">
 
-            <p>
-                No sé si existe una forma suficiente de explicar
-                todo lo que significás para mí, pero quería intentar
-                guardar aunque sea una pequeña parte de nuestra historia
-                en este lugar.
-            </p>
+                Si estás leyendo esto porque me extrañás,
+                probablemente yo también te esté extrañando.
+                Pensá en todos nuestros momentos y acordate
+                de que siempre hay otro abrazo esperándonos. ❤️
 
-            <p>
-                Gracias por cada momento, cada risa, cada abrazo,
-                cada conversación y por todas esas pequeñas cosas
-                que quizás parecen insignificantes pero que para mí
-                significan muchísimo.
-            </p>
-
-            <p>
-                Te amo muchísimo, café con leche. 🤎
-            </p>
+            </div>
 
         </div>
 
-    </section>
+
+        <div>
+
+            <button class="carta-boton"
+            onclick="abrirCarta('sonrisa')">
+
+                😊 Abrí cuando necesites sonreír
+
+            </button>
+
+            <div class="carta-contenido" id="sonrisa">
+
+                Recordá que sos mi café con leche,
+                así que automáticamente tenés la obligación
+                de hacerme sonreír y dejarme hacerte sonreír a vos. 🤎
+
+            </div>
+
+        </div>
 
 
-    <footer>
+        <div>
 
-        <h2>Y esto recién empieza... ❤️</h2>
+            <button class="carta-boton"
+            onclick="abrirCarta('amor')">
+
+                ❤️ Abrí cuando quieras recordar cuánto te amo
+
+            </button>
+
+            <div class="carta-contenido" id="amor">
+
+                Te amo por todas las cosas grandes,
+                pero también por las pequeñas.
+                Por tu forma de ser, por cómo me cuidás,
+                por cómo me escuchás y simplemente por ser vos.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= JUEGO ================= -->
+
+<section class="juego">
+
+    <h2 class="titulo">¿Cuánto te acordás de nosotros? 🧩</h2>
+
+    <p class="subtitulo">
+        Un pequeño examen de nuestra historia.
+    </p>
+
+
+    <div class="pregunta">
+
+        <h3 id="preguntaTexto">
+            ¿Cuál fue nuestra primera cita?
+        </h3>
+
+
+        <button class="opcion"
+        onclick="respuesta(false)">
+
+            Una cena
+
+        </button>
+
+
+        <button class="opcion"
+        onclick="respuesta(true)">
+
+            Zootopia 2 🎬
+
+        </button>
+
+
+        <button class="opcion"
+        onclick="respuesta(false)">
+
+            Un paseo
+
+        </button>
+
+
+        <p id="resultadoJuego"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAPA ================= -->
+
+<section>
+
+    <h2 class="titulo">Nuestro recorrido 🗺️</h2>
+
+    <p class="subtitulo">
+        El camino que nos trajo hasta acá.
+    </p>
+
+
+    <div class="mapa">
+
+
+        <div class="paso">
+
+            👫
+            <br>
+            <strong>Mejores amigos</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            🚌
+            <br>
+            <strong>Viaje a Misiones</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            💐
+            <br>
+            <strong>El bouquet</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            💋
+            <br>
+            <strong>Primer beso</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            🎬
+            <br>
+            <strong>Zootopia 2</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            🌿
+            <br>
+            <strong>Las hamacas</strong>
+
+        </div>
+
+
+        <div class="paso">
+
+            ❤️
+            <br>
+            <strong>Nosotros</strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CARTA FINAL ================= -->
+
+<section>
+
+    <h2 class="titulo">Una última cosa... 💌</h2>
+
+
+    <div class="carta-final">
 
         <p>
-            Te elegiría una y otra vez.
+            Pietro:
         </p>
 
-    </footer>
+
+        <p>
+            No sé si existe una forma suficiente de explicar
+            todo lo que significás para mí.
+            Por eso hice este lugar.
+        </p>
+
+
+        <p>
+            Quería guardar nuestra historia,
+            nuestros recuerdos y todas esas pequeñas cosas
+            que hacen que seas vos.
+        </p>
+
+
+        <p>
+            Gracias por ser mi mejor amigo,
+            por escucharme, cuidarme,
+            hacerme reír y acompañarme.
+        </p>
+
+
+        <p>
+            Gracias por cada momento que vivimos
+            y por todos los que todavía nos quedan.
+        </p>
+
+
+        <p>
+            Te amo muchísimo, café con leche. 🤎
+        </p>
+
+
+        <p>
+            Y esta página termina acá,
+            pero nuestra historia no.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL ================= -->
+
+<footer>
+
+    <h2>Te elegiría una y otra vez. ❤️</h2>
+
+    <p>
+        Agustina ♡ Pietro
+    </p>
+
+    <p>
+        Nuestra historia recién empieza.
+    </p>
+
+</footer>
+
+
+<script>
+
+/* ---------------- RAZONES ---------------- */
+
+const razones = [
+
+"Tu forma de cuidarme ❤️",
+"Lo paciente que sos conmigo.",
+"Tu sentido del humor.",
+"Cómo me escuchás.",
+"Que siempre intentás que estemos bien.",
+"Tu forma de hacerme reír.",
+"Que sos mi mejor amigo.",
+"Cómo me acompañás.",
+"Tu forma de abrazarme.",
+"Que puedo ser yo misma con vos.",
+
+/*
+Acá podemos agregar las otras 190 razones.
+*/
+
+"Porque sos vos.",
+"Porque te elegiría otra vez.",
+"Porque amo nuestra historia.",
+"Porque amo nuestros recuerdos.",
+"Porque todavía tenemos muchísimo por vivir."
+
+];
+
+let numero = 0;
+
+function siguienteRazon() {
+
+    numero++;
+
+    if (numero >= razones.length) {
+        numero = 0;
+    }
+
+    document.getElementById("numeroRazon").textContent = numero + 1;
+
+    document.getElementById("razonTexto").textContent =
+        razones[numero];
+
+}
+
+
+/* ---------------- CARTAS ---------------- */
+
+function abrirCarta(id) {
+
+    const carta = document.getElementById(id);
+
+    if (carta.style.display === "block") {
+
+        carta.style.display = "none";
+
+    } else {
+
+        carta.style.display = "block";
+
+    }
+
+}
+
+
+/* ---------------- JUEGO ---------------- */
+
+function respuesta(correcta) {
+
+    const resultado =
+        document.getElementById("resultadoJuego");
+
+    if (correcta) {
+
+        resultado.textContent =
+            "¡Correcto! 🥹❤️ Obviamente te acordabas.";
+
+    } else {
+
+        resultado.textContent =
+            "Nooo 😭 Pensalo otra vez.";
+
+    }
+
+}
+
+
+/* ---------------- CORAZONES ---------------- */
+
+function crearCorazon() {
+
+    const corazon =
+        document.createElement("div");
+
+    corazon.classList.add("corazon-flotante");
+
+    const corazones = ["❤️","🤎","💕","💗","💞"];
+
+    corazon.textContent =
+        corazones[Math.floor(Math.random() * corazones.length)];
+
+    corazon.style.left =
+        Math.random() * 100 + "vw";
+
+    corazon.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(corazon);
+
+
+    setTimeout(() => {
+
+        corazon.remove();
+
+    }, 8000);
+
+}
+
+
+setInterval(crearCorazon, 1200);
+
+</script>
+
 
 </body>
 </html>
